@@ -1,0 +1,10 @@
+%form{:method => "POST", :action => "/train"}
+  %p
+    %label Class
+    %input{:type => :text, :name => :klass}
+  %p
+    %label Text
+    %textarea{:name => :text, :rows => 10, :cols => 60}
+  %input{:type => :submit}
+
+%a{:href => '/classify'} Classify

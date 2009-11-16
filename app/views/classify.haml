@@ -1,0 +1,17 @@
+%h1 Classify some text
+
+- if @classification
+  %p
+    Classification of text:
+    %strong #{@classification[0]}
+    with a probability of #{@classification[1]}
+
+%form{:method => "POST", :action => "/classify"}
+  %p
+    %label Text
+    %textarea{:name => :text, :rows => 10, :cols => 60}
+      = params[:text]
+  %input{:type => :submit}
+
+
+%a{:href => '/train'} Train

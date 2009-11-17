@@ -1,1 +1,7 @@
-%h1 Hello, world!
+%h1 Rebayes
+
+%h2 Classes
+%ul
+  - for klass in @classes
+    %li
+      %a{:href => "/train/#{klass}"} Train #{klass}

@@ -1,0 +1,13 @@
+%h1 Training successful
+
+%p
+  Rebayes knows #{@klass_count} texts about #{@klass}.
+
+%p
+  %a{:href => "/train/#{@klass}"}
+    Train another
+    %em= @klass
+    text
+
+%p
+  %a{:href => '/classify'} Classify
